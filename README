@@ -1,0 +1,15 @@
+Step 1) - In Terminal type - pip install mysql-connector-python
+
+step2) - 
+SQL CODE:
+mysql> create database hangman;
+mysql> use hangman;
+mysql> create table score(
+-> time DATETIME,
+-> name VARCHAR(20),
+-> win INTEGER,
+-> loss INTEGER);
+
+
+If you want to see the result then:
+mysql> select*from score;
