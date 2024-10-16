@@ -20,11 +20,10 @@ word = random.choice(someWords)
 import datetime
 
 
-# Create a Python datetime object
+
 current_datetime = datetime.datetime.now()
 
 
-# Convert it to a SQL-compatible datetime string
 sql_datetime = current_datetime.strftime('%Y-%m-%d %H:%M:%S')
 name = input("Enter your name : ")
 
