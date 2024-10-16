@@ -31,12 +31,12 @@ name = input("Enter your name : ")
 
 
 if __name__ == '__main__':
-    print('Guess the word! HINT: The word is the name of country')
+    print('Guess the word! HINT: IS IT A COUNTRY')
 
 
-    for _ in word:
-        print('_', end=' ')
-    print()
+for _ in word:
+    print('_', end=' ')
+print()
 
 
     playing = True
@@ -87,7 +87,7 @@ if __name__ == '__main__':
                 print('\nThe word is:', word)
                 flag = 1
                 win += 1
-                print('Congratulations, You won!')
+                print('You won!!')
                 insert = "INSERT INTO score(time,name,win,loss) VALUES(%s,%s,%s,%s)"
                 val = (sql_datetime,name,win,loss)
                 mydb = connection.cursor()
@@ -103,8 +103,7 @@ if __name__ == '__main__':
             mydb = connection.cursor()
             mydb.execute(insert,val)
             connection.commit()
-            print()
-            print('You lost! Try again..')
+            print('You lost! Good luck next time\n')
             print('The word was', word)
 
 
